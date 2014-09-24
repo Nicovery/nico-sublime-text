@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+		\$response = new \Symfony\Component\HttpFoundation\JsonResponse();
+        \$response->setData(array(
+            ${1:'state'=>1},
+            )
+        );
+        return \$response;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>jsonresponse</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

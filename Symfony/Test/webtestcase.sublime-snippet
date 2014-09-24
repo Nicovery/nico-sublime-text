@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+
+namespace Nico\\${1:Name}Bundle\\Tests\\Controller;
+
+use Symfony\\Bundle\\FrameworkBundle\\Test\\WebTestCase;
+
+class ${2:Name}ControllerTest extends WebTestCase
+{
+    public function testIndex()
+    {
+        \$client = static::createClient();
+
+        \$crawler = \$client->request('GET', '${3:url}');
+
+        \$this->assertTrue(\$crawler->filter('html:contains("${4:assertion}")')->count() > 0);
+    }
+}
+]]></content>
+	<tabTrigger>webtest</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

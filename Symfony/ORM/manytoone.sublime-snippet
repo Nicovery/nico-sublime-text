@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+/**
+* @var integer
+* @ORM\ManyToOne(
+* targetEntity="Nico\\${1:Name}Bundle\\Entity\\${2:NameEntity}",
+* inversedBy="${3:entities}"
+* )
+*/
+]]></content>
+	<tabTrigger>manytoone</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

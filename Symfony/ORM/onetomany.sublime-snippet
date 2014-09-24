@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+/**
+* @var integer
+* @ORM\OneToMany(
+* targetEntity="Nico\\${1:Name}Bundle\\Entity\\${2:EntityName}",
+* mappedBy="${3:currentEntityName}",
+* cascade={"persist"}
+* )
+*/
+]]></content>
+	<tabTrigger>onetomany</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

@@ -1,0 +1,94 @@
+<snippet>
+<content><![CDATA[
+namespace Nico\\${1:Custom}Bundle\Block;
+
+use Sonata\BlockBundle\Block\BlockContextInterface;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+
+use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Validator\ErrorElement;
+
+use Sonata\BlockBundle\Model\BlockInterface;
+use Sonata\BlockBundle\Block\BaseBlockService;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Templating\EngineInterface;
+
+
+// use Symfony\Component\Routing\Route;
+
+class ${1:Custom}BlockService extends BaseBlockService{
+	protected \$container;
+	public function __construct(\$name, EngineInterface \$templating,ContainerInterface \$container)
+    {
+        parent::__construct(\$name, \$templating);
+
+        \$this->container    = \$container;
+    }
+
+    /**
+	* Valid the settings data
+    */
+	function validateBlock(ErrorElement \$errorElement, BlockInterface \$block)
+	{
+		\$errorElement
+             ->with('settings.value')
+             ->assertNotNull(array())
+             ->assertNotBlank()
+             ->end();
+    }
+
+	/**
+     * {@inheritdoc}
+     */
+    public function execute(BlockContextInterface \$blockContext, Response \$response = null)
+    {
+	    // merge settings
+       \$settings =  \$blockContext->getSettings();
+       return \$this->renderResponse(\$blockContext->getTemplate(), array(
+        'block'     => \$blockContext->getBlock(),
+        'settings'  => \$blockContext->getSettings(),
+        ), \$response);
+   }
+
+
+    /**
+     * {@inheritdoc}
+     * The form that will be displayed in the Admin
+     */
+    public function buildEditForm(FormMapper \$formMapper, BlockInterface \$block)
+    {
+        \$formMapper->add('settings', 'sonata_type_immutable_array', array(
+            'keys' => array(
+                array('value', 'text', array()),
+                )
+            ));
+    }
+
+    /**
+     * {@inheritdoc}
+     * The name of the Bloc for the Admin section
+     */
+    public function getName()
+    {
+        return '${2:Name} (nico)';
+    }
+
+    /**
+     * {@inheritdoc}
+     * Set default value for the settings
+     */
+    public function setDefaultSettings(OptionsResolverInterface \$resolver)
+    {
+        \$resolver->setDefaults(array(
+            'var' => 'value'
+            ));
+    }
+
+}
+]]></content>
+<tabTrigger>sfblock</tabTrigger>
+<scope>source.php</scope>
+</snippet>

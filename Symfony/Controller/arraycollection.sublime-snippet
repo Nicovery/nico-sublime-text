@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\$this->${1:vars} = new \Doctrine\Common\Collections\ArrayCollection();
+]]></content>
+	<tabTrigger>arraycol</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

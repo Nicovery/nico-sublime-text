@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[\$em->flush();]]></content>
+    <tabTrigger>sfflu</tabTrigger>
+    <scope>source.php</scope>
+    <description>Symfony2 / Controller / Flush Entity Manager</description>
+</snippet>
+

@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+	/**
+     * Add ${1:entities}
+     *
+     * @param \Nico\\${2:Bundle}Bundle\Entity\\${3:Entity} \$${1:entities}
+     * @return Question
+     */
+    public function add${3:Entity}(\Nico\\${2:Bundle}Bundle\Entity\\${3:Entity} \$${1:entities})
+    {
+        \$this->${1:entities}[] = \$${1:entities};
+
+        return \$this;
+    }
+
+    /**
+     * Remove ${1:entities}
+     *
+     * @param \Nico\\${2:Bundle}Bundle\Entity\\${3:Entity} \$${1:entities}
+     */
+    public function remove${3:Entity}(\Nico\\${2:Bundle}Bundle\Entity\\${3:Entity} \$${1:entities})
+    {
+        \$this->${1:entities}->removeElement(\$${1:entities});
+    }
+
+    /**
+     * Get ${1:entities}
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function get${3:entity}s()
+    {
+        return \$this->${1:entities};
+    }
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>setter_getter_collection</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

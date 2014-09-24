@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+public function test${1:Name}()
+{
+    \$client = static::createClient();
+
+    \$crawler = \$client->request('GET', '${2:url}');
+
+    \$this->assertTrue(\$crawler->filter('html:contains("${3:assertion}")')->count() > 0);
+}
+]]></content>
+	<tabTrigger>testaction</tabTrigger> 
+	<scope>source.php</scope>
+</snippet>

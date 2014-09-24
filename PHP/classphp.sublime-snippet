@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+namespace ${1:theNamespace};
+
+class ${2:ClassName}
+{
+    public function __construct()
+    {
+    }
+}
+]]></content>
+    <tabTrigger>phpclass</tabTrigger>
+    <scope>source.php</scope>
+    <description>Class PHP</description>
+</snippet>

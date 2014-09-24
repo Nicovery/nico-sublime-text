@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<form action="{{ path('${1:bundle_route}') }}" method="post" {{ form_enctype(${2:form}) }}>
+{{ form_widget(${2:form}) }}
+	<input type="submit" />
+</form>
+]]></content>
+	 <tabTrigger>twigform</tabTrigger>
+</snippet>

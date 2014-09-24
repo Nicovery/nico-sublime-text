@@ -1,0 +1,27 @@
+<snippet>
+    <content><![CDATA[
+(function ( \$ ) {
+    \$.fn.${1:nameplugin} = function( options ) {
+    //On définit nos paramètres par défaut
+    var defaults =
+    {
+    };  
+    var settings = \$.extend(defaults, options);
+    \$self=null;
+    return this.each(function()
+    {
+      \$self = \$(this);  
+      init();
+    });
+
+    function init(){
+
+    }
+  }
+}( jQuery ));
+    	]]></content>
+    <tabTrigger>jqueryplugin</tabTrigger>
+    <scope>source.js</scope>
+    <description>HTML / JS / Fresh New Jquery Plugin</description>
+</snippet>
+

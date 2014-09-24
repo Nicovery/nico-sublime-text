@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+namespace Nico\\${1:Bundle};
+
+use ${2:Class};
+
+class ${3:NewClass} extends \PHPUnit_Framework_TestCase
+{
+    public function test${4:Function}()
+    {
+        ${5:}
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sftestunit</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

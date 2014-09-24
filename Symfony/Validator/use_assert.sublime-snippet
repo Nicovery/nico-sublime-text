@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+use Symfony\Component\Validator\Constraints as Assert;
+]]></content>
+	<tabTrigger>use_assert</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+/**
+    * @ORM\ManyToMany(
+    * targetEntity="Nico\\${1:Name}Bundle\Entity\\${2:Entity}",
+    * inversedBy="${3:entites}"
+    * )
+    */
+]]></content>
+	<tabTrigger>manytomany</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

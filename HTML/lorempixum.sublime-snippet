@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+http://lorempixel.com/g/${1:largeur}/${2:hauteur}/${3:cats}/${4:1}
+]]></content>
+	<tabTrigger>lorem-pixum</tabTrigger>
+	<!-- <scope>source.python</scope> -->
+</snippet>

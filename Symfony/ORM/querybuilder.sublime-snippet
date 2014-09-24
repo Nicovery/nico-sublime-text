@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+\$qb = \$this->createQueryBuilder('a');
+ 
+\$qb->where('a.id = :id')
+    ->setParameter('id', \$id);
+ 
+    return \$qb->getQuery()
+              ->getResult();
+]]></content>
+	<tabTrigger>querybuilder</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

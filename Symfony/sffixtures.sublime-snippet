@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Nico\\${1:Hello}Bundle\Entity\\${2:Entity};
+${3:}
+
+class Load${2:Entity}Data implements FixtureInterface
+{
+    /**
+     * {@inheritDoc}
+     */
+    public function load(ObjectManager \$manager)
+    {
+        \$${5:entity} = new ${2:Entity}();
+
+
+        \$manager->persist(\$${5:entity} );
+        \$manager->flush();
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sffixtures</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

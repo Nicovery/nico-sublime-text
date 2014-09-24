@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+public function __construct(){
+	${1:}
+}
+]]></content>
+	<tabTrigger>__construct</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

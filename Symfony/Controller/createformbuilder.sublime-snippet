@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+\$form = \$this->createFormBuilder(\$${1:entity})
+			->setAction(\$this->generateUrl(${2:'target_route'}))
+			->setMethod('POST')
+            ->add('${3:field}')
+            ->add('save', 'submit', array('label' => ${4:'Create Post'}))
+            ->getForm();
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>createformbuilder</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

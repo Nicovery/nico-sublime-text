@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+<div class="row">
+	<div class="${1:small-12 large-12} columns">
+		${2:}
+	</div>
+</div>
+]]></content>
+	<tabTrigger>row</tabTrigger>
+	<scope>text.html</scope>
+	<description>
+		Une ligne d'après le framework Foundation 4
+	</description>
+</snippet>

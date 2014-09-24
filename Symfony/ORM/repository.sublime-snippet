@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\$repo${1:sitory} = \$this->getDoctrine()
+                ->getManager() 
+                ->getRepository('${2:BundleName:Entity}');
+]]></content>
+	<tabTrigger>$repo</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

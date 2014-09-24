@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+function(e){
+	\$el = \$(e.currentTarget);
+}
+]]></content>
+	<tabTrigger>func_e</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js,text.html</scope>
+</snippet>

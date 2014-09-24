@@ -1,0 +1,75 @@
+<snippet>
+	<content><![CDATA[
+namespace ${1:Nico\Bundle}\Form\DataTransformer;
+
+use Symfony\Component\Form\DataTransformerInterface;
+use Symfony\Component\Form\Exception\TransformationFailedException;
+use Doctrine\Common\Persistence\ObjectManager;
+use Acme\TaskBundle\Entity\Issue;
+
+class ${2:EntityToNumber}Transformer implements DataTransformerInterface
+{
+    /**
+     * @var ObjectManager
+     */
+    private \$om;
+
+    /**
+     * @param ObjectManager \$om
+     */
+    public function __construct(ObjectManager \$om)
+    {
+        \$this->om = \$om;
+    }
+
+    /**
+     * Transforms an object (${3:entityName}) to a string (number).
+     *
+     * @param  Issue|null \$${3:entityName}
+     * @return string
+     */
+    public function transform(\$${3:entityName})
+    {
+        if (null === \$${3:entityName}) {
+            return "";
+        }
+
+        return \$${3:entityName}->getId();
+    }
+
+    /**
+     * Transforms a string (number) to an object (${3:entityName}).
+     *
+     * @param  string \$number
+     *
+     * @return ${3:entityName}|null
+     *
+     * @throws TransformationFailedException if object (${3:entityName}) is not found.
+     */
+    public function reverseTransform(\$number)
+    {
+        if (!\$number) {
+            return null;
+        }
+
+        \$${3:entityName} = \$this->om
+            ->getRepository('${4:NicoBundle:Entity}')
+            ->findOneById(\$number)
+        ;
+
+        if (null === \$${3:entityName}) {
+            throw new TransformationFailedException(sprintf(
+                'An ${3:entityName} with id "%s" does not exist!',
+                \$number
+            ));
+        }
+
+        return \$${3:entityName};
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>datatransformer</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

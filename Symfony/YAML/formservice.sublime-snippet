@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+    nico_${1:bundle}.form.type.${2:name}:
+        class: %nico_${1:bundle}.form.type.${2:name}.class%
+        ${3:arguments:
+            - ${4:@service}}
+        tags:
+            - { name: form.type, alias: ${5:form_alias} }
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>formservice</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

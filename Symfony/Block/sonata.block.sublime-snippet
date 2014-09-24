@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+nico.${1:bundle}.block.${1:bundle}:
+    class: Nico\\${1:bundle}Bundle\Block\Service\\${1:bundle}BlockService
+    arguments: [nico.${1:bundle}.block.${1:bundle},@templating,@service_container]
+    # arguments: [nico.${1:bundle}.block.${1:bundle},@service_container]
+    tags:
+      - { name: sonata.block}
+]]></content>
+	<tabTrigger>sonata.block</tabTrigger>
+</snippet>

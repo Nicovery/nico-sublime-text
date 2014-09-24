@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+/**
+* @ORM\OneToOne(targetEntity="Nico\${1:Name}Bundle\Entity\${1:EntityName}")
+*/
+]]></content>
+	<tabTrigger>onetoone</tabTrigger>
+	<scope>source.php</scope>
+</snippet>
